@@ -69,12 +69,17 @@ function sumArr($arr) {
     return $sum;
 }
 
-echo "Sum arr = ". sumArr($firstArr);
+echo "Sum arr = ". sumArr($firstArr). "<br>";
 
-function square($a) : float
+function square($y,$x):float
 {
-    $res=$a * $a;
-    return $res;
+    $y=$y*$y;
+  $x=$x*$x;
+  if($y>$x){
+      $res=$y/$x;
+  }else {
+      $res=$x/$y;
+  }
+  return $res;
 }
-echo ' '. "<br>";
-echo 'square area = '. square(10.2);
+echo "square " . square(2,3);
